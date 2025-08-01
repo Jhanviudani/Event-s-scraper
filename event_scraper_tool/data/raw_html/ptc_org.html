@@ -1,0 +1,1168 @@
+<html lang="en"><head><!-- Shady DOM styles for custom-style --><!-- Shady DOM styles for dom-template --><!-- Shady DOM styles for dom-repeat --><!-- Shady DOM styles for array-selector --><!-- Shady DOM styles for dom-if --><!-- Shady DOM styles for iron-location --><!-- Shady DOM styles for iron-query-params --><!-- Shady DOM styles for app-location --><!-- Shady DOM styles for app-route --><!-- Shady DOM styles for iron-pages --><style scope="iron-pages">iron-pages {
+  display:block
+}
+
+iron-pages >:not(.iron-selected) {
+  display:none!important
+}</style><!-- Shady DOM styles for upcontent-carousel --><style scope="upcontent-carousel">upcontent-carousel {
+  display:block;position:relative
+}
+
+upcontent-carousel >* {
+  opacity:0;transition:opacity .5s;position:absolute;top:0;left:0;width:100%;height:100%;z-index:20
+}
+
+upcontent-carousel >:first-child {
+  opacity:100;transition:opacity .5s;z-index:10
+}</style><!-- Shady DOM styles for upcontent-topic-preview --><style scope="upcontent-topic-preview">.uc-gallery--collection.upcontent-topic-preview {
+  border:1px solid #f4f4f4;overflow:visible;display:inline-block;margin:1em;color:inherit;text-decoration:none;box-sizing:border-box;max-width:100%
+}
+
+.uc-gallery--collection.upcontent-topic-preview>.uc-gallery--carousel.upcontent-topic-preview {
+  overflow:visible
+}
+
+.uc-gallery--slide.upcontent-topic-preview {
+  overflow:visible
+}
+
+.uc-gallery--headline.upcontent-topic-preview {
+  position:absolute;top:0;left:0;font-size:1.5em;line-height:2em;margin:.5em;font-weight:lighter;color:#fff;display:inline;overflow:hidden
+}
+
+.uc-gallery--headline-inner.upcontent-topic-preview {
+  background-color:#7755cd
+}
+
+.uc-gallery--source.upcontent-topic-preview {
+  position:absolute;bottom:-.75em;right:0;height:1em;padding:.25em 1em;line-height:1em;font-size:.75em;font-weight:400;color:#fff;display:inline;text-align:center;background-color:#4bb4d2
+}
+
+.uc-gallery--image.upcontent-topic-preview {
+  width:100%;height:100%;object-fit:cover
+}
+
+.uc-gallery--collection-info.upcontent-topic-preview {
+  overflow:hidden;display:flex;flex-flow:row no-wrap;justify-content:center;align-items:center;padding:0 1em
+}
+
+.uc-gallery--title.upcontent-topic-preview {
+  text-transform:uppercase;flex-grow:1;font-size:1em;font-weight:700;color:#565656;text-transform:uppercase
+}
+
+.uc-gallery--count.upcontent-topic-preview {
+  flex-shrink:0;flex-grow:0;font-size:1em;font-weight:400;color:#565656
+}
+
+.uc-car-container.upcontent-topic-preview,.uc-car-container-inner.upcontent-topic-preview {
+  box-sizing:border-box;width:100%;display:block;position:relative
+}
+
+.uc-car-contain-inner.upcontent-topic-preview {
+  width:100%;padding-bottom:75%;display:block;position:relative
+}
+
+.uc-gallery--carousel.upcontent-topic-preview {
+  position:absolute;margin:0;left:0;right:0;bottom:0;top:0
+}</style><!-- Shady DOM styles for upcontent-topic-list --><style scope="upcontent-topic-list">upcontent-topic-list {
+  display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center
+}
+
+.uc-gallery--topic-preview.upcontent-topic-list {
+  max-width:100%
+}</style><!-- Shady DOM styles for upcontent-suggestion --><style scope="upcontent-suggestion">upcontent-suggestion {
+  display:block;width:100%
+}
+
+.uc-gallery--mailto-link.upcontent-suggestion {
+  font-size:.625rem;color:gray;height:.8rem
+}
+
+.uc-gallery--image-container-inner.upcontent-suggestion {
+  width:100%;padding-bottom:75%;display:block;position:relative
+}
+
+.uc-gallery--image.upcontent-suggestion {
+  max-width:100%;width:100%;height:100%;object-fit:cover;position:absolute;margin:0;left:0;right:0;bottom:0;top:0
+}
+
+.uc-gallery--content.upcontent-suggestion {
+  display:block;justify-content:space-between;overflow:visible
+}
+
+.uc-gallery--meta.upcontent-suggestion {
+  display:block;display:grid;overflow:hidden;grid-template-columns:50% 50%
+}
+
+.uc-gallery--headline.upcontent-suggestion,.uc-gallery--summary.upcontent-suggestion {
+  text-overflow:ellipsis
+}
+
+.uc-gallery--headline.upcontent-suggestion {
+  border-bottom:none;font-size:1.2em;overflow:hidden;text-overflow:ellipsis
+}
+
+.uc-gallery--summary.upcontent-suggestion {
+  font-size:.8em;display:block;overflow:hidden;text-overflow:ellipsis;margin-bottom:0
+}
+
+.uc-gallery--date.upcontent-suggestion,.uc-gallery--source.upcontent-suggestion {
+  font-size:.75em;grid-row:1;text-overflow:ellipsis;overflow:hidden;white-space:nowrap
+}
+
+.uc-gallery--date.upcontent-suggestion {
+  grid-column:1
+}
+
+.uc-gallery--source.upcontent-suggestion {
+  grid-column:2;text-align:right
+}</style><!-- Shady DOM styles for upcontent-suggestion-list --><style scope="upcontent-suggestion-list">.uc-gallery--card-container.upcontent-suggestion-list {
+  display:flex;flex-wrap:wrap;justify-content:flex-start
+}
+
+.uc-gallery--card.upcontent-suggestion-list {
+  border:1px solid #000;width:300px;box-sizing:border-box;max-width:100%
+}</style><!-- Shady DOM styles for paper-spinner --><!-- Shady DOM styles for loading-overlay --><style scope="loading-overlay">loading-overlay>div.loading-overlay {
+  background:#fff;position:absolute;top:0;bottom:0;left:0;right:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center
+}</style><!-- Shady DOM styles for upcontent-gallery --><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pittsburgh Technology Council Upcoming Events</title>
+    
+    <!-- Google Tag Manager -->
+	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52330905-1&amp;cx=c&amp;gtm=45He57u0v856173198za200&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~105033763~105033765~105103161~105103163"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XP9XV5W7QV&amp;cx=c&amp;gtm=45He57u0v856173198za200&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~105033763~105033765~105103161~105103163"></script><script async="" src="https://buttons-config.sharethis.com/js/5eea3f7ab900a200126bbb1e.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-M8D78JP"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-M8D78JP');</script>
+	<!-- End Google Tag Manager -->
+  
+    <meta property="description" content="Only the PTC provides you with the opportunity to rub elbows with the best and brightest in Pittsburgh's tech industry."><meta property="keywords" content="pittsburgh, technology, tech, council, events, membership, pgh, pennsylvania, council
+
+">        <meta property="og:type" content="article">
+        <meta property="og:title" content="Upcoming Events">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="https://www.pghtech.org">
+        <meta property="og:url" content="https://www.pghtech.org/events">
+        <meta property="og:site_name" content="Pittsburgh Tech Council">
+                        <meta name="twitter:card" content="summary">
+                <meta name="twitter:title" content="Upcoming Events">
+                <meta name="twitter:description" content="">
+                <meta name="twitter:image" content="https://www.pghtech.org">
+                <meta name="twitter:site" content="@pghtech">
+                <meta name="twitter:creator" content="@pghtech">
+                <link rel="canonical" href="https://www.pghtech.org/events">        <script type="application/ld+json">
+		{
+			"@context": "http://www.schema.org",
+			"@type": "LocalBusiness",
+			"name": "Pittsburgh Technology Council",
+			"url": "http://www.pghtech.org/",
+			"description": "Our main focuses for our members are visibility, talent, business development, and public policy. Learn more about our staff, board of directors and industry data.",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": " 100 South Commons, Suite 172",
+				"addressLocality": "Pittsburgh",
+				"addressRegion": "PA",
+				"postalCode": "15212",
+				"addressCountry": "United States"
+			},
+			"sameAs": [
+				"https://www.facebook.com/pghtech",
+				"https://www.linkedin.com/company/pghtech",
+				"https://twitter.com/pghtech",
+				"https://www.youtube.com/user/PittsburghTechnology",
+				"https://www.instagram.com/pghtechcouncil/",
+				"https://pghtechfuse.com"
+			],
+			"image": "https://www.pghtech.org/vendor/savvior/savvicms-ptc/img/ptc-logo-new-dk.png"
+		}
+		</script>
+		<script type="application/ld+json">
+		{
+			"@context": "http://www.schema.org",
+			"@type": "WebPage",
+			"name": "Pittsburgh Technology Council Upcoming Events",
+			"url": "http://www.pghtech.org/events",
+			"dateModified": "2025-07-01T14:11:48",
+			"datePublished": "1969-12-31T19:00:00"
+		}
+		</script>
+        
+    <link rel="stylesheet" href="https://galleries.upcontent.com/themes/2801278b-b315-4a23-806b-3d3d134704bb/style.css"> 
+    <link rel="stylesheet" href="https://galleries.upcontent.com/themes/05dc3482-374b-42b3-9089-b284f92e5324/style.css"> 
+    <script src="https://code.galleries.upcontent.com/v3/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script> 
+    <script src="https://code.galleries.upcontent.com/v3/bundle.js"></script><style>[hidden] { display: none !important; }</style>
+    
+    <link rel="stylesheet" href="/vendor/savvior/savvicms-ptc/css/app.css">
+  
+    <!-- Google tag (gtag.js) --> 
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XP9XV5W7QV"></script> 
+    <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-XP9XV5W7QV'); </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52330905-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-52330905-1');
+    </script>
+
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5eea3f7ab900a200126bbb1e&amp;product=custom-share-buttons&amp;cms=sop" async="async"></script>
+
+<script async="" src="https://cdn.feathr.co/js/boomerang.min.js"></script><script async="true" type="text/javascript" src="https://polo.feathr.co/v1/analytics/match/script.js?a_id=61ba1e2f1e1bd40300202ee6&amp;pk=feathr"></script><script async="true" type="text/javascript" src="https://polo.feathr.co/v1/accounts/61ba1e2f1e1bd40300202ee6/pixel.js?pk=feathr"></script><img width="0" height="0" src="https://polo.feathr.co/v1/analytics/crumb?cb=a04a72310cdea&amp;a_id=61ba1e2f1e1bd40300202ee6&amp;f_id=688be04b79ca4c00026dfc4c&amp;ses_id=688be04bd313dc552422556e&amp;flvr=page_view&amp;loc_url=https%3A%2F%2Fwww.pghtech.org%2Fevents&amp;s_w=800&amp;s_h=600&amp;b_w=756&amp;b_h=417" border="0" alt=""></head>
+
+<body class="">
+    <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8D78JP"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+<a class="sr-only sr-only-focusable" href="#outer" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Skip to content</a>
+
+<header id="main">
+    <!--
+         fixed-top
+    -->
+    <div class="nav-container" role="navigation">
+            <nav id="top" class="d-none d-lg-block">
+                <div class="p-2">
+                    <div class="row social-row">
+                    
+                        <div class="col-1">
+                            <a target="_blank" href="https://www.facebook.com/pghtech" title="Facebook" data-feathr-click-track="true" data-feathr-link-aids="[&quot;61ba1e2f1e1bd40300202ee6&quot;],61ba1e2f1e1bd40300202ee6"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="col-1">
+                            <a target="_blank" href="https://www.linkedin.com/company/pghtech" title="linkedin" data-feathr-click-track="true" data-feathr-link-aids="[&quot;61ba1e2f1e1bd40300202ee6&quot;],61ba1e2f1e1bd40300202ee6"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <div class="col-1">
+                            <a target="_blank" href="https://twitter.com/pghtech" title="Twitter" data-feathr-click-track="true" data-feathr-link-aids="[&quot;61ba1e2f1e1bd40300202ee6&quot;],61ba1e2f1e1bd40300202ee6"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="col-1">
+                            <a target="_blank" href="http://www.youtube.com/user/PittsburghTechnology" title="Youtube" data-feathr-click-track="true" data-feathr-link-aids="[&quot;61ba1e2f1e1bd40300202ee6&quot;],61ba1e2f1e1bd40300202ee6"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="col-1">
+                            <a target="_blank" href="https://www.instagram.com/pghtechcouncil/" title="Instagram" data-feathr-click-track="true" data-feathr-link-aids="[&quot;61ba1e2f1e1bd40300202ee6&quot;],61ba1e2f1e1bd40300202ee6"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="col-4 offset-15">
+                            <ul class="navbar-nav text-right">
+                                <li>
+                                    <a href="https://members.pghtech.org/iCore/Contacts/Sign_In.aspx" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Sign In</a>
+                                </li>
+                                <li>    
+                                    <a href="/how-to-join" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Join Up</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        <div class="container">
+        
+            <nav id="main" class="navbar navbar-expand-lg ">
+                <div class="container">
+                    <a class="navbar-brand" href="/" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                                                <!-- interior pages -->
+                        <img src="/vendor/savvior/savvicms-ptc/img/ptc-logo-lt.png" alt="PTC Logo">
+                                            </a>
+                    <a class="navbar-brand forty80" href="/" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                                                <!-- interior pages -->
+                        <img src="/vendor/savvior/savvicms-ptc/img/forty-eighty-lt.svg" alt="Forty Eighty Logo">
+                                            </a>
+                    <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fal fa-bars"></i>
+                    </button>
+                    <!-- 
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    -->
+                    <div class="navbar-collapse" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav ml-lg-auto">
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about-us" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">About Us</a><div class="dropdown-menu"><a href="/Swag/tech-council-swag" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Tech Council Swag</a><a href="/fortyx80/about" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Fortyx80</a><a href="/DREAMS/DREAMS_Coalition" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">DREAMS Coalition</a><a href="/about/-presidents-message" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">President's Message</a><a href="/about-us/staff-directory-about-us-staff-directory" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Staff Directory</a><a href="/about-us/board-of-directors" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Board of Directors</a><a href="/PTCinthenews" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">PTC in the News</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/events" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Events</a><div class="dropdown-menu"><a href="/events/category/ATHENA" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">ATHENA</a><a href="/events/category/CIO+of+the+Year" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">CIO of the Year &amp; Tech Titan Awards</a><a href="/events/category/Golf+Outing" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Golf Outing</a><a href="/events/category/Huntington+Breakfast+Briefing" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Huntington Bank Breakfast Briefing</a><a href="/events/category/Information+Technology" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Information Technology</a><a href="/events/category/Manufacturing" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Manufacturing</a><a href="/events/category/Networking" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Networking</a><a href="/events/category/Public+Policy" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Public Policy</a><a href="/events/category/Talent" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Talent</a><a href="/events/category/Tech50" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Tech 50</a><a href="/events/category/Women%27s+Focused" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Women's Focused</a><a href="/events/member-events" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Member Events</a><a href="/programs" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Virtual Archives</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/Membership" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Membership</a><div class="dropdown-menu"><a href="/Testimonials" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Testimonials</a><a href="/Defense_Robotics/defense-robotics-intelligent-systems" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Defense Robotics</a><a href="/busdev/business-development" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Business Development</a><a href="/talent/talent" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Talent</a><a href="/visibility/visibility" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Visibility</a><a href="/publicpolicy/public-policy" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Public Policy</a><a href="/newmembers/new-members" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">New Members</a><a href="/member-benefits" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Benefits</a><a href="/member-to-member-incentives" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Member Incentives</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/talent" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Talent</a><div class="dropdown-menu"><a href="/K12_STEM/k12-stem" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">K12 STEM</a><a href="/entrepreneur/entrepreneur" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Entrepreneur </a><a href="/HireUP/hireup" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">HireUP Recruiting Events </a><a href="/professionaldevProfessional-Development" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Professional Development</a><a href="/launch/launch" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">LAUNCH</a><a href="/Pittsburgh_Career_Connector" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Pittsburgh Career Connector</a><a href="/ApprentiPGH_Apprenti-PGH" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Apprenti PGH</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/news-and-publications" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Media</a><div class="dropdown-menu"><a href="/news-and-publications/category/TEQ" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">TEQ Magazine</a><a href="/news-and-publications/category/OnRAMP" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">OnRAMP Magazine</a><a href="/news-and-publications/category/State+of+the+Industry+Report" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">State of the Industry Report</a><a href="/news-and-publications/category/40+Stories" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">40 Stories</a><a href="/news-and-publications/category/PTC+Member+News" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Member News</a><a href="/news-and-publications/category/Tech+Record" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Tech Poster</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/podcasts" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Podcasts</a><div class="dropdown-menu"><a href="/podcasts/category/Emerging+Tech+Law+Series" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Emerging Tech Law Series</a><a href="/podcasts/category/Podcasts" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">TechVibe Radio</a><a href="/podcasts/category/Pittsburgh+Founder" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Pittsburgh Founder</a><a href="/podcasts/category/One+Mic+Stand" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">10-Minute Tech Talks</a><a href="/podcasts/category/Health+Care+Reinvented" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Health Care Reinvented</a><a href="/podcasts/category/Catalyst+Connection+Digital+Bridge" class="dropdown-item" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Catalyst Connection Digital Bridge</a></div></li><li class="nav-item"><a href="/Advertising-sponsorship" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Advertising &amp; Sponsorship</a></li>                            <li>
+                                <div data-open="false" class="search-nav">
+                                    <i class="fas fa-fw fa-search"></i> <span class="show-sm">Search</span>
+                                </div>
+                            </li>
+                            <li class="nav-item d-lg-none">
+                                <a href="https://members.pghtech.org/iCore/Contacts/Sign_In.aspx" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><i class="fa fa-user"></i> Sign In</a>
+                            </li>
+                            <li class="nav-item d-lg-none">
+                                <a href="/how-to-join" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><i class="fa fa-pen"></i> Join Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="search-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="search-container">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <div class="form-container">
+                            <form action="/search">
+                                <div class="icon">
+                                    <button type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                <div class="input">
+                                    <input type="text" placeholder="Looking for something?" name="q" title="Enter Search Term">
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="outer">
+
+<header class="hero orange abstract-bottom-right cmsEditable cmsBGImage" style="background-image: url(/UserFiles/Image/lights%20city.jpg);">
+    <div class="bg-img cmsEditable green" data-cmseditable="Color:class:headerColors">
+        <div class="hero-copy">
+            <div class="container">
+                <div class="row align-content-center">
+                        <div class="col-md-12 align-self-center">
+        <div id="event-slider-content" class="swiper-container swiper-container-initialized swiper-container-vertical">
+            <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-slide-active" style="height: 300px;">
+                        <div>
+                            <h1>2025 IT Leadership Golf Outing</h1>
+                            <p>
+                                The PTC’s Golf Outing is a signature event for executives and professionals working in southwestern Pennsylvania in the IT, engineering, healthcare and support services industries.
+                            </p>
+                        </div>
+                    </div>
+                                        <div class="swiper-slide swiper-slide-next" style="height: 300px;">
+                        <div>
+                            <h1>Huntington Bank Breakfast Briefing: Chicken of the Sea</h1>
+                            <p>
+                                 Huntington Bank Breakfast Briefing: Chicken of the Sea When: August 27, 2025Where: Pittsburgh Technology Council | Nova Place About Event Register Here                             </p>
+                        </div>
+                    </div>
+                                        <div class="swiper-slide" style="height: 300px;">
+                        <div>
+                            <h1>Supply Chain Innovation Insights: Emerging Supply Chain Trends Across Manufacturing</h1>
+                            <p>
+                                 Supply Chain Innovation Insights: Emerging Supply Chain Trends Across Manufacturing When: August 6, 2025Where: Nova Place Conference Center | 100 S Commons                             </p>
+                        </div>
+                    </div>
+                                </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </div>
+    <div class="col-md-12 col-lg-11 offset-lg-1 align-self-center">
+        <div class="event-slider">
+            <div id="event-slider" class="event-slides swiper-container swiper-container-initialized swiper-container-vertical swiper-container-autoheight">
+                <div class="swiper-wrapper" style="height: 155px;">
+                                            <div class="swiper-slide swiper-slide-active" data-url="/events/GolfOuting_2025" style="height: 155px;">
+                            <div class="event-slide">
+                                <div class="event-date">
+                                    <span class="event-label">Date</span>
+                                    <span class="event-value">August 4, 2025</span>
+                                </div>
+                                <div class="event-location">
+                                    <span class="event-label">Location</span>
+                                    <span class="event-value">Treesdale Golf and Country Club | 1 Arnold Palmer Drive, Gibsonia, PA 15044</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="swiper-slide swiper-slide-next" data-url="/events/hbb_chicken" style="height: 155px;">
+                            <div class="event-slide">
+                                <div class="event-date">
+                                    <span class="event-label">Date</span>
+                                    <span class="event-value">August 27, 2025</span>
+                                </div>
+                                <div class="event-location">
+                                    <span class="event-label">Location</span>
+                                    <span class="event-value">Nova Place | Pittsburgh Technology Council Office</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="swiper-slide" data-url="/events/supplychain_trends" style="height: 155px;">
+                            <div class="event-slide">
+                                <div class="event-date">
+                                    <span class="event-label">Date</span>
+                                    <span class="event-value">August 6, 2025</span>
+                                </div>
+                                <div class="event-location">
+                                    <span class="event-label">Location</span>
+                                    <span class="event-value">Nova Place Conference Center | 100 S Commons, Pittsburgh, PA 15212</span>
+                                </div>
+                            </div>
+                        </div>
+                                        </div>                                    
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            <div class="event-controls">
+                <div class="arrows">
+                    <div class="arrow swiper-arrow-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true">
+                        <i class="fal fa-long-arrow-down"></i>
+                    </div>
+                    <div class="arrow swiper-arrow-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false">
+                        <i class="fal fa-long-arrow-up"></i>
+                    </div>
+                </div>
+                <div class="event-link">
+                                            <a href="/events/GolfOuting_2025" id="event-slide-url" class="btn btn-yellow btn-rounded" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">View Event</a>
+                                        </div>
+            </div>
+        </div>
+    </div>
+    
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="header-nav cmsEditable cmsBucketColumn"><div class="container">
+    <div class="row">
+        <div class="col-md-24">
+            <div class="header-tab">
+                <div class="selected">
+                                                    <span class="label">Upcoming Events</span>
+                                <span class="icon"></span>
+                                            </div>
+                <ul>
+                    <li><a href="/previous-events" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Previous Events</a></li><li><a href="/2022-TechFest" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">2022 TechFest</a></li>                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</header>
+
+
+<section padding-top="">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-md-12">
+                <h2 class="line-above orange cmsEditable cmsTitle" data-cmstitle="Display Title">                    Calendar Events                </h2>
+            </div>
+            <div class="col-md-12">
+                <div class="actions right">
+                    <a target="_blank" href="http://members.pghtech.org/ptc/MemberPortal/Events/iCore/Events/Events_List.aspx" class="btn btn-outline btn-outline-dark cmsEditable cmsLink cmsLinkOnly" data-cmstitle="Sign Up Button Link" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                        Register For Events
+                    </a>
+                </div>
+            </div>
+        </div>                  
+    </div>  
+</section>
+
+<section padding-top-xs="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="calendar">
+                    <div class="table-responsive">
+                    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-ptc no-footer"><table class="calendar data-table dataTable no-footer" id="DataTables_Table_0" role="grid">
+                        <thead>
+                            <tr role="row"><th class="sortable sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="
+                                    event name
+                                    name
+                                : activate to sort column ascending" style="width: 423.328px;">
+                                    <span class="hide-sm">event name</span>
+                                    <span class="show-sm">name</span>
+                                </th><th class="sortable sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
+                                    event date(s)
+                                    dates
+                                : activate to sort column descending" style="width: 71.547px;">
+                                    <span class="hide-sm">event date(s)</span>
+                                    <span class="show-sm">dates</span>
+                                </th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="event url
+                                    url: activate to sort column ascending" style="width: 85.125px;"><span class="hide-sm">event url</span>
+                                    <span class="show-sm">url</span></th></tr>
+                        </thead>
+                        <tbody class="cmsEditable cmsBucketColumn">        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+        <tr class="upcoming odd" role="row">
+			<!--
+            <td class="status">
+                <div class="d-flex align-items-center">
+                    <i></i>
+                    upcoming                </div>
+            </td>
+            -->
+            <td class="name">
+                <!--<span class="identifier"></span>-->
+                2025 IT Leadership Golf Outing            </td>
+            <td class="center sorting_1" data-order="1754310600">
+                <div class="dates">
+                    <div class="date">
+                        <span class="day">4</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <!--
+                    <div class="arrow">
+                        <i class="fal fa-long-arrow-right"></i>
+                    </div>
+                    <div class="date">
+                        <span class="day">4</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    -->
+                </div>
+            </td>
+            <td>
+                <a href="/events/GolfOuting_2025" class="btn btn-rounded btn-md" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                    <span class="hide-sm">View Event</span>
+                    <span class="show-sm">View</span>
+                </a>
+            </td>
+        </tr><tr class="upcoming even" role="row">
+			<!--
+            <td class="status">
+                <div class="d-flex align-items-center">
+                    <i></i>
+                    upcoming                </div>
+            </td>
+            -->
+            <td class="name">
+                <!--<span class="identifier"></span>-->
+                Supply Chain Innovation Insights: Emerging Supply Chain Trends Across Manufacturing            </td>
+            <td class="center sorting_1" data-order="1754481600">
+                <div class="dates">
+                    <div class="date">
+                        <span class="day">6</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <!--
+                    <div class="arrow">
+                        <i class="fal fa-long-arrow-right"></i>
+                    </div>
+                    <div class="date">
+                        <span class="day">6</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    -->
+                </div>
+            </td>
+            <td>
+                <a href="/events/supplychain_trends" class="btn btn-rounded btn-md" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                    <span class="hide-sm">View Event</span>
+                    <span class="show-sm">View</span>
+                </a>
+            </td>
+        </tr><tr class="upcoming odd" role="row">
+			<!--
+            <td class="status">
+                <div class="d-flex align-items-center">
+                    <i></i>
+                    upcoming                </div>
+            </td>
+            -->
+            <td class="name">
+                <!--<span class="identifier"></span>-->
+                Virtual Membership Overview Session            </td>
+            <td class="center sorting_1" data-order="1755262800">
+                <div class="dates">
+                    <div class="date">
+                        <span class="day">15</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <!--
+                    <div class="arrow">
+                        <i class="fal fa-long-arrow-right"></i>
+                    </div>
+                    <div class="date">
+                        <span class="day">15</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    -->
+                </div>
+            </td>
+            <td>
+                <a href="/events/member_sess_aug25" class="btn btn-rounded btn-md" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                    <span class="hide-sm">View Event</span>
+                    <span class="show-sm">View</span>
+                </a>
+            </td>
+        </tr><tr class="upcoming even" role="row">
+			<!--
+            <td class="status">
+                <div class="d-flex align-items-center">
+                    <i></i>
+                    upcoming                </div>
+            </td>
+            -->
+            <td class="name">
+                <!--<span class="identifier"></span>-->
+                Pittsburgh Technology Council Summer Open House            </td>
+            <td class="center sorting_1" data-order="1755720000">
+                <div class="dates">
+                    <div class="date">
+                        <span class="day">20</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <!--
+                    <div class="arrow">
+                        <i class="fal fa-long-arrow-right"></i>
+                    </div>
+                    <div class="date">
+                        <span class="day">20</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    -->
+                </div>
+            </td>
+            <td>
+                <a href="/events/summeropenhouse" class="btn btn-rounded btn-md" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                    <span class="hide-sm">View Event</span>
+                    <span class="show-sm">View</span>
+                </a>
+            </td>
+        </tr><tr class="upcoming odd" role="row">
+			<!--
+            <td class="status">
+                <div class="d-flex align-items-center">
+                    <i></i>
+                    upcoming                </div>
+            </td>
+            -->
+            <td class="name">
+                <!--<span class="identifier"></span>-->
+                Huntington Bank Breakfast Briefing: Chicken of the Sea            </td>
+            <td class="center sorting_1" data-order="1756297800">
+                <div class="dates">
+                    <div class="date">
+                        <span class="day">27</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <!--
+                    <div class="arrow">
+                        <i class="fal fa-long-arrow-right"></i>
+                    </div>
+                    <div class="date">
+                        <span class="day">27</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    -->
+                </div>
+            </td>
+            <td>
+                <a href="/events/hbb_chicken" class="btn btn-rounded btn-md" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                    <span class="hide-sm">View Event</span>
+                    <span class="show-sm">View</span>
+                </a>
+            </td>
+        </tr></tbody>
+                    </table><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item icon previous rounded-arrows rounded-prev disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><div class="icon"><i class="fal fa-long-arrow-left"></i></div></a></li><li class="paginate_button page-item active page-num"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">1</a></li><li class="paginate_button page-item  page-num"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">2</a></li><li class="paginate_button page-item  page-num"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" class="page-link" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">3</a></li><li class="paginate_button page-item next rounded-next rounded-arrows" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0" class="page-link" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><div class="icon"><i class="fal fa-long-arrow-right"></i></div></a></li></ul></div></div>
+                    </div>
+
+
+<!--
+                    <div class="rounded-paging">
+                        <div disabled class="rounded-prev rounded-arrows">
+                            <div class="icon">
+                                <i class="fal fa-long-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="rounded-pages">
+                            <ul>
+                                <li class="active">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li class="paging-ellipse">...</li>
+                                <li>9</li>
+                            </ul>
+                        </div>
+                        <div class="rounded-next rounded-arrows">
+                            <div class="icon">
+                                <i class="fal fa-long-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section padding-top="">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-14">
+                    <h2 padding-bottom-xxs="" class="line-above orange center cmsEditable cmsTitle" data-cmstitle="Display Title">                        PTC Event Series                    </h2>
+                    <p class="txt-center txt-lt cmsEditable cmsTitle" data-cmstitle="Sub Heading" style="margin-top:.5rem;">We have an event for everyone!</p>
+                </div>
+            </div>                  
+        </div>  
+    </section>
+
+    <section class="event-series cmsEditable cmsBucketColumn" padding-top-xs=""><div class="container">
+    <div id="series-container" class="row">
+    
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                <a href="/events/category/ATHENA" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="/UserFiles/Image/Event%20Logos/ATHENAPittsburghLogo.jpg" alt="">
+
+                        <svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g fill="#A286AE" fill-rule="nonzero">
+                                    <path d="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <!--<div class="pill 0">Category</div>-->
+                        <h3>ATHENA</h3>
+                        <p>The Greater Pittsburgh ATHENA Award and ATHENA Young Professional Award recognizes exceptional women who demonstrate excellence in their profession, contribute to their community, and help other women and girls to succeed through mentorship.</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                <a href="/events/category/CIO+of+the+Year" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="/UserFiles/Image/Event%20Logos/CIO%20NEW%20LOGO.png" alt="">
+
+                        <svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g fill="#FFA500" fill-rule="nonzero">
+                                    <path d="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <!--<div class="pill 0">Category</div>-->
+                        <h3>CIO of the Year &amp; Tech Titan Awards</h3>
+                        <p>CIO of the Year &amp; Tech Titan Awards is your opportunity to recognize and honor the accomplishments of Southwestern PA's&nbsp;most hardworking CIOs, CTOs, CISOs, and deserving&nbsp;tech leaders.&nbsp;</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                <a href="/events/category/Golf+Outing" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="/UserFiles/Image/Event%20Logos/2025%20GOLF%20(1).png" alt="">
+
+                        <svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g fill="#FFFFFF" fill-rule="nonzero">
+                                    <path d="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <!--<div class="pill 0">Category</div>-->
+                        <h3>Golf Outing</h3>
+                        <p>The annual Tech Council&nbsp;Golf Outing is a signature event for executives and professionals working in technology in southwestern Pennsylvania.</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                <a href="/events/category/Huntington+Breakfast+Briefing" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="/UserFiles/Image/Event%20Logos/BreakfastBriefingLogo.png" alt="">
+
+                        <svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g fill="#58A532" fill-rule="nonzero">
+                                    <path d="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <!--<div class="pill 0">Category</div>-->
+                        <h3>Huntington Bank Breakfast Briefing</h3>
+                        <p>Connect with Pittsburgh's tech leaders!</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                <a href="/events/category/Information+Technology" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="/UserFiles/Image/Event%20Logos/ITlabel.png" alt="">
+
+                        <svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g fill="#59a545" fill-rule="nonzero">
+                                    <path d="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <!--<div class="pill 0">Category</div>-->
+                        <h3>Information Technology</h3>
+                        <p>Develop a&nbsp;community&nbsp;through one-on-one introductions, partner contacts and business development initiatives</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                <a href="/events/category/Manufacturing" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="/UserFiles/Image/Event%20Logos/manlabel%20(1).png" alt="">
+
+                        <svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g fill="#822f2f" fill-rule="nonzero">
+                                    <path d="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <!--<div class="pill 0">Category</div>-->
+                        <h3>Manufacturing</h3>
+                        <p>Provide&nbsp;knowledge&nbsp;through programming, best-practices, company tours and open forum discussions</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                <a href="/events/category/Networking" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="/UserFiles/Image/Event%20Logos/netowrkinglabel.png" alt="">
+
+                        <svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g fill="#3684AF" fill-rule="nonzero">
+                                    <path d="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <!--<div class="pill 0">Category</div>-->
+                        <h3>Networking</h3>
+                        <p>Connect and network with those in the industry! All of our events offer networking&nbsp;but these events are solely for networking purposes!&nbsp;</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                <a href="/events/category/Public+Policy" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="/UserFiles/Image/Event%20Logos/publicpolicylabel.png" alt="">
+
+                        <svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g fill="#741526" fill-rule="nonzero">
+                                    <path d="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <!--<div class="pill 0">Category</div>-->
+                        <h3>Public Policy</h3>
+                        <p>Representing the aggregate voice of more than 1,400 member companies, the Pittsburgh Technology Council employs an experienced government relations team that works to educate individual technology firms about government-related threats and opportunities, while also working to promote a pro-growth public policy agenda on behalf of the entire region’s technology industry.</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+            
+    </div> <!-- / cards row -->
+
+    <script type="text/javascript">
+                    var tmpl = ('<div class="col-lg-6 col-md-8 col-sm-12">' +
+                    '<a href="{{link}}">' +
+                        '<div class="card">' +
+                            '<div class="card-header">' +
+                            '<img src="{{img}}" alt="">' +
+                            '<svg width="100%" viewBox="0 0 413 326" version="1.1" xmlns="http://www.w3.org/2000/svg" '+
+                            ' xmlns:xlink="http://www.w3.org/1999/xlink">' +
+                                '<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">' +
+                                '<g fill="#{{color}}" fill-rule="nonzero">' +
+                                    '<path ' +
+                                        'd="M0.7253,0.7862 L0.7253,325.11614 C143.484581,317.698111 266.734863,302.585942 370.476146,279.779634 '+ 'C389.81099,275.56336 403.557608,271.323339 411.716,267.059569 C411.848997,259.598523 411.942138,254.010572 '+ '411.995423,250.295718 C412.370998,224.111546 412.277857,140.941707 411.716,0.7862 L0.7253,0.7862 Z"'+
+                                        'id="Path"></path>' +
+                                '</g>' +
+                                '</g>' +
+                            '</svg>' +
+                        '</div>' +
+                        '<div class="card-body">' +
+                                //'<div class="pill {{pill}}">Category</div>' +
+                                '<h3>{{title}}</h3>' +
+                                '{{description}}' +
+                            '</div>' +
+                        '</div>' +
+                        '</a>' +
+                    '</div>');
+                </script>
+    <nav class="all-article-navigation-container">
+        <ul class="pagination" data-total="11" data-perpage="8" data-pagesvisible="5" data-container="#series-container" data-tmpl="tmpl" data-newsurl="/vendor/savvior/savvicms-ptc/includes/ajax.php?action=eventSeries">
+            <li class="page-item page-prev disabled"><a class="page-link" href="#" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><span class="hide-sm">Previous</span></a></li>
+            <li class="page-item disabled ellipsis-prev" style="display:none;"><a class="page-link" href="#" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">...</a></li>
+            <li data-page="1" class="page-item page-num active"><a class="page-link" href="#" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">1</a></li>
+            <li data-page="2" class="page-item page-num"><a class="page-link" href="#" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">2</a></li>
+            <li class="page-item disabled ellipsis-next"><a class="page-link" href="#" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">...</a></li>
+            <li class="page-item page-next active"><a class="page-link" href="#" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><span class="hide-sm">Next</span></a></li>
+            
+        </ul>
+    </nav>
+    </div>
+</section>
+
+
+<section class="top-text-container">
+    <div class="row" role="row">
+        <div class="col-md-24 cmsEditable cmsBody" role="column" data-cmstitle="Body Content"><p style="text-align: center;">We love to get feedback on our programs &amp; events.&nbsp;Please take a brief <a class="btn btn-teal-lt btn-rounded" href="http://www.surveymonkey.com/s/PTCEventFeedback" style="margin-top:0;" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">survey</a>&nbsp;to tell us how we're doing!</p><p style="text-align: center;">Review our Upcoming Events or Learn More by contacting our Director of Event Management,&nbsp;<a href="mailto:mcolf@pghtech.org" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Megan Colf</a>, today.</p></div>
+    </div>
+</section>
+
+
+<section padding-top="" padding-bottom="" class="bg-lt">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-11">
+                <h2 padding-bottom-xxs="" class="line-above cmsEditable cmsTitle" data-cmstitle="Label">                    Stay Up To Date                </h2>
+            </div>
+            <div class="col-lg-13">
+                <p no-margin="" class="sub-font cmsEditable cmsBody" data-cmstitle="Description"></p><p>Want to keep in touch with the PTC? Sign up below and we will send you updates on all the new things going on in the world of Pittsburgh's tech sector. And don't worry, your email is safe with us.</p><p></p>
+            </div>
+        </div>
+
+        <div padding-top-xs="" class="row">
+            <div class="col-md-24">
+                <form action="#" class="savviForm generateToken generateRandom">
+                    <input type="hidden" name="fid" value="2">
+                    <input type="hidden" name="q_onpage[6]" value="1">
+                    <input type="hidden" value="0" name="page">
+                    <input type="hidden" name="action" value="fillform">
+                    
+                    <div class="form-group form-group-lg button-inside">
+                        <input name="qoption[6]" placeholder="Enter your email address..." type="text" class="form-control required" title="Enter your e-mail address">
+                        <button type="submit" class="btn btn-dark btn-lg">Sign Up</button>
+                    </div>
+                <input type="hidden" name="token" value="9b256e98a5e25b1117ca63bb014b636a7d083cf2e289698d175334d4b308b781d6f4abdbd8e71fa1f78bb6e958dfc639"><input type="hidden" name="randomnumber" value="492733611846949777"></form>
+            </div>
+        </div>
+
+</div></section>
+
+<div class="container cmsEditable pb-5" data-cmseditable="Padding:class:padding">
+        <div class="row align-items-end">
+            <div class="col-md-12">
+                <h2 class="line-above">
+                    Our Sponsors
+                </h2>
+            </div>
+            <div class="col-md-12 align-self-end">
+                <div class="actions right">
+                    <div class="sponsor-nav-icon sponsor-nav-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true">
+                        <i class="fal fa-long-arrow-left"></i>
+                    </div>
+                    <div class="sponsor-nav-icon sponsor-nav-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false">
+                        <i class="fal fa-long-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div margin-top="" class="row">
+            <div no-padding="" class="col-md-24 no-padding">
+                <div id="sponsor-slider" class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-wrapper cmsEditable  cmsBucketColumn" style="transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide swiper-slide-active" style="width: 345.5px; margin-right: 35px;">
+    <a href="https://compunetix.com/" target="_blank" class="sponsor" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+        <svg width="100%" viewBox="0 0 273 241" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="shape" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M60.31,38.5325 C37.3836,48.3037 32.0801,55.7256 23.6849,87.7746 C15.3141,119.81 3.83794,176.488 1.32061,207.163 C-1.19672,237.84 5.25688,242.526 44.8992,239.837 C84.5551,237.159 157.385,227.076 198.01,218.493 C238.636,209.897 247.057,202.829 254.699,169.747 C262.315,136.692 269.129,77.6341 271.543,44.8769 C273.958,12.1486 271.786,6.73723 257.14,2.77251 C242.469,-1.18005 214.726,-0.172535 197.027,1.31366 C179.352,2.79986 171.838,3.80586 147.812,10.2506 C123.787,16.6802 83.2623,28.7612 60.31,38.5325 Z" id="Path"></path>
+                </g>
+            </g>
+        </svg>
+        <img src="/UserFiles/Image/Client%20Logos/compunetix_large.jpeg" alt="Compunetix logo">
+    </a>
+</div>
+
+<div class="swiper-slide swiper-slide-next" style="width: 345.5px; margin-right: 35px;">
+    <a href="https://www.highmark.com/" target="_blank" class="sponsor" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+        <svg width="100%" viewBox="0 0 273 241" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="shape" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M60.31,38.5325 C37.3836,48.3037 32.0801,55.7256 23.6849,87.7746 C15.3141,119.81 3.83794,176.488 1.32061,207.163 C-1.19672,237.84 5.25688,242.526 44.8992,239.837 C84.5551,237.159 157.385,227.076 198.01,218.493 C238.636,209.897 247.057,202.829 254.699,169.747 C262.315,136.692 269.129,77.6341 271.543,44.8769 C273.958,12.1486 271.786,6.73723 257.14,2.77251 C242.469,-1.18005 214.726,-0.172535 197.027,1.31366 C179.352,2.79986 171.838,3.80586 147.812,10.2506 C123.787,16.6802 83.2623,28.7612 60.31,38.5325 Z" id="Path"></path>
+                </g>
+            </g>
+        </svg>
+        <img src="/UserFiles/Image/Client%20Logos/highmark-bcbs-logo.png" alt="Highmark Logo">
+    </a>
+</div>
+
+<div class="swiper-slide" style="width: 345.5px; margin-right: 35px;">
+    <a href="https://www.huntington.com/" target="_blank" class="sponsor" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+        <svg width="100%" viewBox="0 0 273 241" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="shape" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M60.31,38.5325 C37.3836,48.3037 32.0801,55.7256 23.6849,87.7746 C15.3141,119.81 3.83794,176.488 1.32061,207.163 C-1.19672,237.84 5.25688,242.526 44.8992,239.837 C84.5551,237.159 157.385,227.076 198.01,218.493 C238.636,209.897 247.057,202.829 254.699,169.747 C262.315,136.692 269.129,77.6341 271.543,44.8769 C273.958,12.1486 271.786,6.73723 257.14,2.77251 C242.469,-1.18005 214.726,-0.172535 197.027,1.31366 C179.352,2.79986 171.838,3.80586 147.812,10.2506 C123.787,16.6802 83.2623,28.7612 60.31,38.5325 Z" id="Path"></path>
+                </g>
+            </g>
+        </svg>
+        <img src="/UserFiles/Image/Client%20Logos/huntington_medium.jpg" alt="Huntington Bank Logo">
+    </a>
+</div>
+
+<div class="swiper-slide" style="width: 345.5px; margin-right: 35px;">
+    <a href="http://www.cgi.com" target="_blank" class="sponsor" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+        <svg width="100%" viewBox="0 0 273 241" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="shape" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M60.31,38.5325 C37.3836,48.3037 32.0801,55.7256 23.6849,87.7746 C15.3141,119.81 3.83794,176.488 1.32061,207.163 C-1.19672,237.84 5.25688,242.526 44.8992,239.837 C84.5551,237.159 157.385,227.076 198.01,218.493 C238.636,209.897 247.057,202.829 254.699,169.747 C262.315,136.692 269.129,77.6341 271.543,44.8769 C273.958,12.1486 271.786,6.73723 257.14,2.77251 C242.469,-1.18005 214.726,-0.172535 197.027,1.31366 C179.352,2.79986 171.838,3.80586 147.812,10.2506 C123.787,16.6802 83.2623,28.7612 60.31,38.5325 Z" id="Path"></path>
+                </g>
+            </g>
+        </svg>
+        <img src="/UserFiles/Image/Client%20Logos/cgi.png" alt="">
+    </a>
+</div>
+</div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer-container">
+
+            <div class="row">
+                <div class="col-md-12 sitemap-container">
+                    <h2 class="sitemap-title">SITEMAP</h2>
+                    <div class="row">
+                        <div class="col-12 footer-link-container">
+                            <ul class="footer-links">
+                                <li class="nav-item"><a href="/about-us" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">About Us</a></li><li class="nav-item"><a href="/events" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Events</a></li><li class="nav-item"><a href="/Membership" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Membership</a></li><li class="nav-item"><a href="/talent" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Talent</a></li><li class="nav-item"><a href="/news-and-publications" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Media</a></li><li class="nav-item"><a href="/podcasts" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Podcasts</a></li><li class="nav-item"><a href="/Advertising-sponsorship" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Advertising &amp; Sponsorship</a></li>                            </ul>
+                        </div>
+                        <div class="col-12 footer-link-container">
+                            <ul class="footer-links">
+                                <li class="nav-item"><a href="/contact-us" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Contact Us</a></li><li class="nav-item"><a href="/policies" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">Policies</a></li><li class="nav-item"><a href="/how-to-join" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">How to Join</a></li>                            </ul>
+                        </div>
+                    </div>
+                    <div class="row social-row">
+                        <div class="col-4">
+                            <a target="_blank" href="https://www.facebook.com/pghtech" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><img src="/vendor/savvior/savvicms-ptc/img/facebook.png" alt="facebook"></a>
+                        </div>
+                        <div class="col-4">
+                            <a target="_blank" href="https://www.linkedin.com/company/pghtech" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><img src="/vendor/savvior/savvicms-ptc/img/linkedin.png" alt="linkedin"></a>
+                        </div>
+                        <div class="col-4">
+                            <a target="_blank" href="https://twitter.com/pghtech" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><img src="/vendor/savvior/savvicms-ptc/img/twitter.png" alt="twitter"></a>
+                        </div>
+                        <div class="col-4">
+                            <a target="_blank" href="http://www.youtube.com/user/PittsburghTechnology" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><img src="/vendor/savvior/savvicms-ptc/img/youtube.png" alt="youtube"></a>
+                        </div>
+                        <div class="col-4">
+                            <a target="_blank" href="https://www.instagram.com/pghtechcouncil/" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6"><img src="/vendor/savvior/savvicms-ptc/img/icon-instagram.png" alt="instagram"></a>
+                        </div>
+                        
+                    </div>
+                    <div class="row copyright-row">
+                        <div class="col-24">
+                            <p>
+                                Copyright © 2025 Pittsburgh Technology Council. All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 map-container">
+                    <div class="row find-us-container">
+                        <div class="col-24">
+                            <div id="map-footer" data-marker="img/icon-marker.png">
+                                <img src="/vendor/savvior/savvicms-ptc/img/img-footer-map.jpg" alt="">
+                            </div>
+                            <div class="map-footer-content">
+                                <p>
+                                    Let us show you why you should join today. Contact us at
+                                    <a href="#" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">412-687-2700</a>
+                                    or stop by the office at
+                                    <a href="#" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+                                        100 South Commons, Suite 172, Pittsburgh, PA 15212
+                                    </a>
+                                    and say hello!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="col-md-12 map-container">
+                    <div class="row find-us-container">
+                        <div class="col-24">
+                            <p>
+                                Let us show you why you should join today. Contact us at
+                                <a href="#">412-687-2700</a>
+                                or stop by the office at
+                                <a href="#">
+                                    100 South Commons, Suite 172, Pittsburgh, PA 15212
+                                </a>
+                                and say hello!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+       
+			<div class="row" style="background-color:#e1e1e1; padding: 10px 0 0 0;">
+				<div class="col-md-24" style="text-align:center;">
+					
+                            <p>
+								<a href="https://www.savvior.com" target="_blank" data-feathr-click-track="true" data-feathr-link-aids="61ba1e2f1e1bd40300202ee6">
+									<img src="https://www.savvior.com/media/poweredby.png" alt="Powered by Savvior">
+								</a>
+							</p>
+				</div>
+			</div>
+    </footer> <!-- !footer -->
+</div><!-- !outer-->
+    <script src="/vendor/savvior/savvicms-ptc/js/compiled.js"></script>
+        
+
+    
+
+<style is="custom-style">[hidden]:not([style-scope]):not(.style-scope) {
+  display:none!important
+}
+
+</style><style is="custom-style"></style><style is="custom-style"></style><link><script type="text/javascript" id="" charset="">!function(b,d,e,f,c,a){b[c]||(a=b[c]=function(){a.invoke?a.invoke.apply(a,arguments):a.queue.push(arguments)},a.queue=[],a.loaded=1*new Date,a.version="1.0.0",b.FeathrBoomerang=a,b=d.createElement(e),c=d.getElementsByTagName("head")[0]||d.getElementsByTagName("script")[0].parentNode,b.async=!0,b.src=f,c.appendChild(b))}(window,document,"script","https://cdn.feathr.co/js/boomerang.min.js","feathr");feathr("fly","61ba1e2f1e1bd40300202ee6");feathr("sprinkle","page_view");</script></body></html>
