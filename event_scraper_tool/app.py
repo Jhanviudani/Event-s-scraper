@@ -1,53 +1,62 @@
-# app.py
 import streamlit as st
 import pandas as pd
+import openai
 import os
 
-os.makedirs("results", exist_ok=True)
-os.makedirs("data/raw_html", exist_ok=True)
-os.makedirs("data/text", exist_ok=True)
-
-from datetime import datetime
-
-from scraper import scrape_and_save_all
-from llm_parser import extract_events_from_texts
-
+st.set_page_config(layout="wide")
 st.title("🔍 Pittsburgh Event Scraper & Extractor")
 
-# Step 1: Upload Excel
-uploaded_file = st.file_uploader("Upload your Events.xlsx file", type=["xlsx"])
+# Tabs
+tab1, tab2 = st.tabs(["📁 Upload & Extract", "💬 Chat with Events"])
 
-if uploaded_file:
-    df = pd.read_excel(uploaded_file)
-    st.success("File uploaded. Previewing first 5 rows:")
-    st.dataframe(df.head())
+with tab1:
+    uploaded_file = st.file_uploader("Upload your Events.xlsx file", type=["xlsx"])
+    if uploaded_file:
+        df = pd.read_excel(uploaded_file)
+        st.success("File uploaded. Previewing first 5 rows:")
+        st.dataframe(df.head())
 
-    # Option to skip scraping if files exist
-    skip_scraping = st.checkbox("Skip scraping if text files already exist", value=True)
+        # Optional: Save uploaded data for chat
+        st.session_state['event_data'] = df
 
-    # Step 2: Scrape Pages
-    if st.button("Scrape and Save Webpages"):
-        os.makedirs("data/raw_html", exist_ok=True)
-        os.makedirs("data/text", exist_ok=True)
-        scrape_and_save_all(df, skip_existing=skip_scraping)
-        st.success("Scraping complete. Text files saved.")
+with tab2:
+    st.subheader("Ask questions about your events")
 
-    # Step 3: Ask for date input
-    date_str = st.text_input("What is today's date? (YYYY-MM-DD)")
+    if 'event_data' not in st.session_state:
+        st.warning("Please upload and extract event data in the first tab before chatting.")
+    else:
+        df = st.session_state['event_data']
+        if 'chat_history' not in st.session_state:
+            st.session_state.chat_history = []
 
-    # Step 4: OpenAI API Key
-    openai_key = st.text_input("Enter your OpenAI API Key", type="password")
+        user_input = st.text_input("Ask something like 'Show me all events in August'", key="chat_input")
 
-    if date_str and openai_key and st.button("Extract Events using LLM"):
-        try:
-            user_date = datetime.strptime(date_str, "%Y-%m-%d")
-            output_df = extract_events_from_texts(df, user_date, openai_key)
-            st.success("Extraction complete. Previewing data:")
-            st.dataframe(output_df)
+        if user_input:
+            df_sample = df.to_csv(index=False)[:6000]  # Limit for token size
+            prompt = f"""
+You are an assistant that helps a user analyze a CSV of upcoming events.
 
-            # Export to CSV
-            output_df.to_csv("results/events_extracted.csv", index=False)
-            with open("results/events_extracted.csv", "rb") as f:
-                st.download_button("Download CSV", f, file_name="events_extracted.csv")
-        except Exception as e:
-            st.error(f"Error during processing: {str(e)}")
+Here is the data:
+{df_sample}
+
+Now answer this question:
+{user_input}
+"""
+            openai.api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
+
+            try:
+                response = openai.ChatCompletion.create(
+                    model="gpt-4",
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=0.3,
+                )
+                answer = response['choices'][0]['message']['content']
+            except Exception as e:
+                answer = f"❌ Error from OpenAI: {str(e)}"
+
+            st.session_state.chat_history.append((user_input, answer))
+
+        # Display chat
+        for question, response in reversed(st.session_state.chat_history):
+            st.markdown(f"**You:** {question}")
+            st.markdown(f"**Assistant:** {response}")
