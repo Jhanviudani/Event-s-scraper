@@ -2,6 +2,11 @@
 import streamlit as st
 import pandas as pd
 import os
+
+os.makedirs("results", exist_ok=True)
+os.makedirs("data/raw_html", exist_ok=True)
+os.makedirs("data/text", exist_ok=True)
+
 from datetime import datetime
 
 from scraper import scrape_and_save_all
